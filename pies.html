@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pies | Bethany's Pie Shop</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="site.css" type="text/css" />
 </head>
 
 <body>
@@ -17,13 +14,16 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/pies.html">Pies</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <aside><img src="images/logo.png" alt="Bethanys's pie shop"></aside>
+        <aside>
+            <img src="images/logo.png" alt="Bethany's Pie Shop" />
+        </aside>
+
         <article>
             <h1>Pies</h1>
 
@@ -50,17 +50,17 @@
             </section>
         </article>
     </main>
+
     <footer>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/pies.html">Pies</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </footer>
 </body>
-
 <script>
     window.addEventListener("DOMContentLoaded", function (e) {
         const orderButtons = document.querySelectorAll("button[data-order]");
@@ -72,7 +72,7 @@
                 const container = button.parentNode;
 
                 const order = {
-                    id: button.getAttribute("data-order"),
+                    id: (id = button.getAttribute("data-order")),
                     title: container.querySelector(".title").innerText,
                     price: container.querySelector(".price").innerText,
                     desc: container.querySelector(".desc").innerText
@@ -82,10 +82,7 @@
 
                 const url = window.location.href.replace("pies.html", "order.html");
                 window.location.href = url;
-
             });
-
-
         });
     });
 </script>
